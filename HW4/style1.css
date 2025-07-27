@@ -1,0 +1,155 @@
+
+  body {
+  display: flex;
+  justify-content: center; /* จัดกลางแนวนอน */
+  align-items: center;     /* จัดกลางแนวตั้ง */
+  min-height: 100vh;       /* ความสูงเท่าหน้าจอ */
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient( 50deg, #ff5722, #181818,#ff5722);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+/* กล่องข้อมูลหลักสูตร */
+.custom-card {
+  background: #ffffff;
+  border-left: 8px solid #b71c1c; 
+  border-radius: 60px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+/* หัวข้อหลัก */
+.title {
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 2px solid #f9a825; /* สีทอง */
+  padding-bottom: 10px;
+}
+
+/* หัวข้อย่อย */
+h4 {
+  margin-top: 15px;
+  color: #2c3e50;
+}
+
+/* คำอธิบายหลักสูตร */
+.description {
+  background-color: #f2e2e2;
+  padding: 18px;
+  border-left: 4px solid #f9a825;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* รองรับหน้าจอขนาดเล็ก */
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+/* กล่องสำหรับจัดภาพให้อยู่กลาง */
+.center-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* ระยะห่างระหว่างรูป */
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* สไตล์ภาพ */
+.center-images img {
+  box-shadow: 10 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* เพิ่มลูกเล่นเมื่อชี้เมาส์ */
+.center-images img:hover {
+  transform: scale(1.03);
+}
+
+/* ปุ่มลิงก์โปรไฟล์ */
+.profile-link {
+  padding: 15px 50px ;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ปุ่มกด */
+.profile-link a {
+  padding: 15px 50px;
+  background-color: #ff9900;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.profile-link a:hover {
+  background-color: #ffb561;
+}
+
+
+
+
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 10px auto;
+  background-color: #ffffff;
+  border-radius: 9px;
+  overflow:hidden;
+  font-size: 18px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #ff9900;
+  font-weight: 600;
+}
+
+td:last-child {
+  color: var(--main-orange);
+  font-weight: 600;
+}
+
+tfoot td {
+  font-weight: 600;
+  background-color: #f3f3f3;
+}
